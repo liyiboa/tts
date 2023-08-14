@@ -1,7 +1,7 @@
 {
-    "name": "ms-ra-forwarder",
+    "name": "tts",
     "description": "Microsoft Read Aloud Forwarder",
-    "repository": "https://github.com/rogueme/ms-tts",
+    "repository": "https://github.com/liyiboa/tts",
     "env": {
         "TOKEN": {
             "description": "保护您的服务不被其他人访问",
