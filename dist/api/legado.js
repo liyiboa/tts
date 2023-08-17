@@ -59,15 +59,15 @@ module.exports = (request, response) => __awaiter(void 0, void 0, void 0, functi
             Format: voiceFormat,
         };
         data['header'] = JSON.stringify(header);
-        let ssml = '<speak xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="http://www.w3.org/2001/mstts" xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">' +
+        let ssml = '<speak xmlns="http://www.w3.org/2001/10/synthesis" xmlns:tts="http://www.w3.org/2001/tts" xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">' +
             `<voice name="${voiceName}">` +
             (styleName
-                ? `<mstts:express-as style="${styleName}" styledegree="${styleDegree}">`
+                ? `<tts:express-as style="${styleName}" styledegree="${styleDegree}">`
                 : ``) +
             '<prosody rate="{{speakSpeed + ' + speakSpeed + '}}%" pitch="+0Hz" volume="+100%">' + langstrstar +
             "{{String(speakText).replace(/&/g, '&amp;').replace(/\"/g, '&quot;').replace(/'/g, '&apos;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}}" + langstrend +
             '</prosody>' +
-            (styleName ? ` </mstts:express-as>` : ``) +
+            (styleName ? ` </tts:express-as>` : ``) +
             '</voice>' +
             '</speak>';
         let body = {
